@@ -548,4 +548,94 @@ table tbody tr:hover {
       <strong>Is Semrush better than other tools like Ahrefs or Ubersuggest?</strong><br>
 ✅ Yes. Semrush offers a more complete toolkit, better data, and integrated AI not found in competitors.
     </li>
+    </ul>
+</section>
+
+
+
+
+  <section class="card" style="text-align: center;">
+  <h2>🔥 Limited-Time Free Trial</h2>
+  <p>Try all Semrush tools free today – no credit card required.</p>
   
+  
+  
+  
+  
+  <div  id="countdown-timer">⏳ Loading countdown...</div>
+
+<script>
+  function getOrSetDeadline() {
+    const storedDeadline = localStorage.getItem('countdownDeadline');
+    const now = new Date();
+
+    if (storedDeadline) {
+      const deadline = new Date(storedDeadline);
+      // If deadline is in the past, set a new one
+      if (now >= deadline) {
+        const newDeadline = new Date(now.getTime() + 48 * 60 * 60 * 1000);
+        localStorage.setItem('countdownDeadline', newDeadline);
+        return newDeadline;
+      }
+      return deadline;
+    } else {
+      // Set initial deadline
+      const newDeadline = new Date(now.getTime() + 48 * 60 * 60 * 1000);
+      localStorage.setItem('countdownDeadline', newDeadline);
+      return newDeadline;
+    }
+  }
+
+  function startCountdown() {
+    let deadline = getOrSetDeadline();
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+
+      if (diff <= 0) {
+        // Timer expired, reset for another 48 hours
+        deadline = new Date(now.getTime() + 48 * 60 * 60 * 1000);
+        localStorage.setItem('countdownDeadline', deadline);
+      }
+
+      const hours = Math.floor((deadline - now) / (1000 * 60 * 60));
+      const minutes = Math.floor((deadline - now) % (1000 * 60 * 60) / (1000 * 60));
+      const seconds = Math.floor((deadline - now) % (1000 * 60) / 1000);
+
+      document.getElementById('countdown-timer').textContent =
+        `⏳ Offer ends in ${hours}h ${minutes}m ${seconds}s – grab it now!`;
+    }
+
+    updateCountdown(); // run immediately
+    setInterval(updateCountdown, 1000); // update every second
+  }
+
+  startCountdown();
+</script>
+  <a href="https://www.semrush.com" class="btn">🚀 Start Free – No Card Needed</a>
+
+<p style="font-size: 0.85rem; margin-top: 0.5rem; color: black;">
+  
+  <span>🌟 9,800+ 5-star reviews</span> &nbsp; | &nbsp; <span>📈 10M+ Users</span> &nbsp; | &nbsp; <span>🏢 Used by Fortune 500</span>
+</p>
+
+
+</section>
+
+
+  <footer>
+    © 2025 | This landing page is created for the Semrush Affiliate Program
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta">
+    <a href="https://www.semrush.com">🛠 Get My SEO Toolkit – Start Free</a>
+  
+   <small style="display:block; font-size: 0.75rem; color:#555;">⏰ Limited-time free access – no credit card</small>
+  </div>
+  
+  
+</body>
+</html>
+
